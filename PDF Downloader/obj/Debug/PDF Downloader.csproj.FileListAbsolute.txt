@@ -1,0 +1,15 @@
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\PDF Downloader.exe.config
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\PDF Downloader.exe
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\PDF Downloader.pdb
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\HtmlAgilityPack.dll
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\HtmlAgilityPack.pdb
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\HtmlAgilityPack.xml
+D:\Programming\C#\PDF Downloader\PDF Downloader\obj\Debug\PDF_Downloader.PDFDownloader.resources
+D:\Programming\C#\PDF Downloader\PDF Downloader\obj\Debug\PDF_Downloader.Properties.Resources.resources
+D:\Programming\C#\PDF Downloader\PDF Downloader\obj\Debug\PDF Downloader.csproj.GenerateResource.Cache
+D:\Programming\C#\PDF Downloader\PDF Downloader\obj\Debug\PDF Downloader.exe
+D:\Programming\C#\PDF Downloader\PDF Downloader\obj\Debug\PDF Downloader.pdb
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\CSharp.SqlServerCe.dll
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\System.Data.SqlServerCe.dll
+D:\Programming\C#\PDF Downloader\PDF Downloader\bin\Debug\CSharp.SqlServerCe.xml
+D:\Programming\C#\PDF Downloader\PDF Downloader\obj\Debug\PDF Downloader.csprojResolveAssemblyReference.cache

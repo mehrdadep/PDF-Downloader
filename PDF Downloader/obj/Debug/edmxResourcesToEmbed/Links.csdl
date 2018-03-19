@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Links" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="LinksContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Sites" EntityType="Links.Site" />
+    <EntitySet Name="Links" EntityType="Links.Link" />
+    <AssociationSet Name="SiteLink" Association="Links.SiteLink">
+      <End Role="Site" EntitySet="Sites" />
+      <End Role="Link" EntitySet="Links" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Site">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baseLink" Type="String" Nullable="false" />
+    <Property Name="rssLink" Type="String" Nullable="false" />
+    <Property Name="crawled" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Links" Relationship="Links.SiteLink" FromRole="Site" ToRole="Link" />
+  </EntityType>
+  <EntityType Name="Link">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="link" Type="String" Nullable="false" />
+    <Property Name="crawled" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SiteID" Relationship="Links.SiteLink" FromRole="Link" ToRole="Site" />
+    <Property Name="SiteId1" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="SiteLink">
+    <End Type="Links.Site" Role="Site" Multiplicity="1" />
+    <End Type="Links.Link" Role="Link" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Site">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Link">
+        <PropertyRef Name="SiteId1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
