@@ -7,6 +7,7 @@ crawling websites to get and download pdf files
 3. save crawled link in local sqlite database
 4. crawl and download pdf file in desired folder with site name subfolder
 5. find and save rss links
+6. using HTMLAgilityPack
 
 # Multithreading
 1. using SemaphoreSlim to manage threads of requests and saving files
