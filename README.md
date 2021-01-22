@@ -1,22 +1,40 @@
-# PDF-Downloader
-crawling websites to get and download pdf files
+# PDF Downloader
 
-# Crawling methodolgy
-1. using HttpWebRequest to get data from websites
-2. find links with .pdf extension and application/pdf content-type
-3. save crawled link in local sqlite database
-4. crawl and download pdf file in desired folder with site name subfolder
-5. find and save rss links
-6. using HTMLAgilityPack
+Crawl websites and download all the pdf files from them
 
-# Multithreading
-1. using SemaphoreSlim to manage threads of requests and saving files
-2. non-blocking UI threads
+## Requirements
 
-# Batch input
-1. add .txt files with a site url per line
-2. add excel .xlsx file with a column named "site"
-3. this site urls save into local database after proccessing and can be used later
+- `.NET` sdk version 4.5+
+- `mono-dev` (For linux)
 
+## Dependencies
 
+- `CSharp.SqlServerCe` version 1.0.2.6
+- `HTMLAgilityPack` version 1.7.0
 
+## Crawling methodology
+
+- Use `HttpWebRequest` to get data from websites
+- Find links with `.pdf` extension and `application/pdf` content-type
+- Save crawled link in local `sqlite` database
+- Crawl and download pdf file in desired folder with site name subfolder
+- Find and save rss links
+
+## Multithreading
+
+- Use `SemaphoreSlim` to manage threads of requests and saving files
+- Use non-blocking UI threads
+
+## Batch input
+
+### Option 1: `.txt` file
+
+- Use a `.txt` file that contains a site urls per line
+
+### Option 2: `xlsx` file
+
+- Use a `.xlsx` file that contains site urls under a column named "site"
+
+## Running
+
+Use `bin/Release/PDF Downloader.exe` to run the program
